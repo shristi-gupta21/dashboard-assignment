@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 
 const SideNav = () => {
-  const [menuItems, setMenuItems] = useState(null);
   const [menuGroup1Items, setMenuGroup1Items] = useState(null);
   const [menuGroup2Items, setMenuGroup2Items] = useState(null);
   const [menuGroup3Items, setMenuGroup3Items] = useState(null);
@@ -24,6 +23,7 @@ const SideNav = () => {
         return response.json();
       })
       .then((data) => {
+        console.log("data", data);
         data.sort((a, b) => (a.menuItemName > b.menuItemName ? 1 : -1));
         let groupOneItem = data.filter(
           (item) => item.menuGroupName == "Group One"
@@ -37,13 +37,12 @@ const SideNav = () => {
           (item) => item.menuGroupName == "Group Three"
         );
         setMenuGroup3Items(groupThreeItem);
-        setMenuItems(data);
       })
       .catch((error) => {
         console.error("There was a problem with the fetch operation:", error);
       });
   }, []);
-  console.log(menuGroup1Items, menuGroup2Items, menuGroup3Items, menuItems);
+  console.log(menuGroup1Items, menuGroup2Items, menuGroup3Items);
   return (
     <>
       <div className="bg-[#132332] w-1/5 h-screen">
