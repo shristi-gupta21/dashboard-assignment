@@ -46,28 +46,37 @@ const SideNav = () => {
   return (
     <>
       <div className="bg-[#132332] w-1/5 h-screen">
-        <p className=" text-white text-3xl py-5 px-4">Assignment</p>
-        <div className="bg-white w-full h-px"></div>
-        <p className=" text-white text-xl py-3 px-4">Menu Group One</p>
+        <p className=" text-[#F5F5F5] text-3xl py-5 px-4">Assignment</p>
+        <div className="bg-[#F5F5F5] w-full h-px"></div>
+        <p className=" text-[#F5F5F5] text-xl py-3 px-4">Menu Group One</p>
         {menuGroup1Items?.map((item) => (
           <>
-            <p className=" text-white text-lg py-2 px-4" key={item.menuItemId}>
+            <p
+              className=" text-[#F5F5F5] text-lg py-2 px-4"
+              key={item.menuItemId}
+            >
               {item.menuItemName}
             </p>
           </>
         ))}
-        <p className=" text-white text-xl py-3 px-4">Menu Group Two</p>
+        <p className=" text-[#F5F5F5] text-xl py-3 px-4">Menu Group Two</p>
         {menuGroup2Items?.map((item) => (
           <>
-            <p className=" text-white text-lg py-2 px-4" key={item.menuItemId}>
+            <p
+              className=" text-[#F5F5F5] text-lg py-2 px-4"
+              key={item.menuItemId}
+            >
               {item.menuItemName}
             </p>
           </>
         ))}
-        <p className=" text-white text-xl py-3 px-4">Menu Group Three</p>
+        <p className=" text-[#F5F5F5] text-xl py-3 px-4">Menu Group Three</p>
         {menuGroup3Items?.map((item) => (
           <>
-            <p className=" text-white text-lg py-2 px-4" key={item.menuItemId}>
+            <p
+              className=" text-[#F5F5F5] text-lg py-2 px-4"
+              key={item.menuItemId}
+            >
               {item.menuItemName}
             </p>
           </>
